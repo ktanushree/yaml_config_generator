@@ -8,8 +8,8 @@ This script is used to generate YAML config files from a CSV data source and a J
 #### Requirements
 * Active Prisma SDWAN Account
 * Python >=3.6
-* Python modules:
-    * Prisma SDWAN (CloudGenix) Python SDK >= 5.6.1b2 - <https://github.com/CloudGenix/sdk-python>
+* Pandas
+* jinja2
 
 #### License
 MIT
