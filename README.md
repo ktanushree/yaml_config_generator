@@ -15,17 +15,17 @@ This script is used to generate YAML config files from a CSV data source and a J
 MIT
 
 #### Installation:
- - **Github:** Download files to a local directory, manually run `configgen.py`. 
+ - **Github:** Download files to a local directory, manually run `yaml_config_generator.py`. 
 
 ### Examples of usage:
 ```
-./configgen.py -F csvfile.csv -J jinjatemplate.jinja2 -O /Users/tkamath/configs -S site_name
+./yaml_config_generator.py -F csvfile.csv -J jinjatemplate.jinja2 -O /Users/tkamath/configs -S site_name
 ```
 
 
 #### Help Text:
 ```angular2
-TanushreeKamath:configprefixfilters tkamath$ ./configgen.py -h
+TanushreeKamath:yaml_config_generator tkamath$ ./yaml_config_generator.py -h
 usage: configgen.py [-h] [--controller CONTROLLER] [--email EMAIL] [--password PASSWORD] [--insecure] [--noregion] [--sdkdebug SDKDEBUG] [--csvfile CSVFILE] [--jinjafile JINJAFILE] [--outputdir OUTPUTDIR] [--sitename SITENAME]
 
 YAML Config Generator (v1.0)
@@ -67,7 +67,7 @@ Config:
   --sitename SITENAME, -S SITENAME
                         CSV column name for extracting YAML file name. Typically, YAML config files are site specific and named after the site.
 
-TanushreeKamath:configprefixfilters tkamath$ 
+TanushreeKamath:yaml_config_generator tkamath$ 
 ```
 
 #### Version
