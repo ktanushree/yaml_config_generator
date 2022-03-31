@@ -2,11 +2,16 @@
 This script is used to generate YAML config files from a CSV data source and a Jinja template
 
 #### Synopsis
-This script is used to generate YAML config files from a CSV data source and a Jinja template
+This script is used to generate YAML config file that can be used by the cloudgenix_config utility to push configuration to the Prisma SD-WAN Controller. This scripts expects 2 input files:
+- CSV Data source
+- Jinja Template
+
+The script also needs to know an output directory location where YAML config files need to be stored. 
+
+The YAML files generated are named after the site. The script expects the column name in the CSV data source where site names for the configurations are stored in order derive YAML file names. 
 
 
 #### Requirements
-* Active Prisma SDWAN Account
 * Python >=3.6
 * Pandas
 * jinja2
