@@ -49,7 +49,7 @@ def go():
     csvfile = args["csvfile"]
     template_file = args["jinjafile"]
     outputdir = args["outputdir"]
-    sitename = args["sitename"]
+    sitename_col = args["sitename"]
 
     if not os.path.exists(csvfile):
         print("ERR: CSV Data file not found. Please provide the entire path")
@@ -77,13 +77,13 @@ def go():
     # Generate YAML Config files
     ############################################################################
     columns = list(csvdata.columns)
-    if sitename in columns:
+    if sitename_col in columns:
         print("INFO: Generating YAML Config files")
         for i, row in csvdata.iterrows():
-            print("\t{}".format(row[sitename]))
+            print("\t{}".format(row[sitename_col]))
             config = {}
             for item in columns:
-                if item == sitename:
+                if item == sitename_col:
                     sitename = row[item]
 
                 config[item] = row[item]
@@ -97,7 +97,7 @@ def go():
             f.close()
 
     else:
-        print("ERR: Invalid column name for sitename: {}".format(sitename))
+        print("ERR: Invalid column name for sitename: {}".format(sitename_col))
         sys.exit()
 
     ############################################################################
